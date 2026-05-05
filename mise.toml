@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+# Mise tasks for prompt-enhancer-plugin
+# Usage: mise run <task>
+# Or with arguments: mise run test
+
+[tools]
+python = "3.12"
+uv = "latest"
+
+[tasks]
+help = { description = "Show available tasks", run = "echo 'Tasks: install, test, lint, verify, ci, clean'" }
+
+install = { description = "Install plugin into ~/.hermes/plugins/", run = """
+#!/usr/bin/env bash
+PLUGIN_NAME="prompt-enhancer-plugin"
+HERMES_PLUGINS="$HOME/.hermes/plugins"
+echo "Installing $PLUGIN_NAME to $HERMES_PLUGINS/"
+mkdir -p "$HERMES_PLUGINS"
+rm -rf "$HERMES_PLUGINS/$PLUGIN_NAME"
+cp -r "$(pwd)" "$HERMES_PLUGINS/$PLUGIN_NAME"
+echo "Installed. Add to ~/.hermes/config.yaml:"
+echo "  plugins:"
+echo "    enabled:"
+echo "      - $PLUGIN_NAME"
+echo "Then start a new session (/reset or restart hermes)"
+""" }
+
+link = { description = "Symlink for development (edits here reflect live)", run = """
+#!/usr/bin/env bash
+PLUGIN_NAME="prompt-enhancer-plugin"
+HERMES_PLUGINS="$HOME/.hermes/plugins"
+echo "Linking $PLUGIN_NAME to $HERMES_PLUGINS/"
+mkdir -p "$HERMES_PLUGINS"
+rm -rf "$HERMES_PLUGINS/$PLUGIN_NAME"
+ln -s "$(pwd)" "$HERMES_PLUGINS/$PLUGIN_NAME"
+echo "Linked. Edits in this directory are live."
+""" }
+
+unlink = { description = "Remove symlink", run = """
+#!/usr/bin/env bash
+rm -f "$HOME/.hermes/plugins/prompt-enhancer-plugin"
+""" }
+
+test = { description = "Run all tests", run = "uv run --with httpx python3 test_plugin.py" }
+
+lint = { description = "Syntax check", run = "python3 -m py_compile __init__.py && echo 'Syntax OK'" }
+
+verify = { description = "Verify plugin exports", run = """
+#!/usr/bin/env bash
+uv run --with httpx python3 -c '
+import sys
+sys.path.insert(0, ".")
+import __init__ as pe
+assert hasattr(pe, "register"), "Missing register()"
+assert hasattr(pe, "pre_llm_call_hook"), "Missing pre_llm_call_hook"
+print("Exports verified")
+'
+""" }
+
+ci = { description = "Run CI pipeline locally", depends = ["lint", "verify", "test"] }
+
+clean = { description = "Remove build artifacts", run = "rm -rf __pycache__ *.pyc logs/*.log" }

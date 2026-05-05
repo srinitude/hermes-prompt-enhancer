@@ -1,0 +1,20 @@
+name: prompt-enhancer-plugin
+version: 2.2.0
+description: >
+  Enhances user prompts via pre_llm_call hook before they reach the LLM.
+  Provider-agnostic, supports custom_providers, with heuristic priority fix.
+author: Kiren + Hermes Agent
+license: MIT
+homepage: https://github.com/YOUR_USERNAME/prompt-enhancer-plugin
+requirements:
+  - httpx
+hooks:
+  - pre_llm_call
+config:
+  env_prefix: PROMPT_ENHANCER
+  settings:
+    enabled: { default: true, type: bool }
+    model: { default: "anthropic/claude-sonnet-4-20250514", type: str }
+    provider: { default: "", type: str }
+    api_key: { default: "", type: str, secret: true }
+    base_url: { default: "", type: str }

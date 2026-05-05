@@ -1,0 +1,61 @@
+[2026-05-04T23:18:05.983] Enhancing message (17 chars): 'fix the login bug'...
+[2026-05-04T23:18:06.125] Enhancement request failed: Client error '401 Unauthorized' for url 'https://openrouter.ai/api/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+[2026-05-04T23:18:06.125] [537b1271] Enhancement failed — using original
+[2026-05-04T23:18:30.779] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T23:18:30.779] Enhancing message (17 chars): 'fix the login bug'...
+[2026-05-04T23:18:30.904] Enhancement request failed: Client error '401 Unauthorized' for url 'https://openrouter.ai/api/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+[2026-05-04T23:18:30.904] [026e0bc3] Enhancement failed — using original
+[2026-05-04T23:29:11.999] Enhancing message (17 chars): 'fix the login bug'...
+[2026-05-04T23:29:12.120] Enhancement request failed: Client error '401 Unauthorized' for url 'https://openrouter.ai/api/v1/messages'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+[2026-05-04T23:29:12.120] [8a4d49fd] Enhancement failed — using original
+[2026-05-04T23:30:10.546] Enhancing message (17 chars): 'fix the login bug'...
+[2026-05-04T23:30:10.825] Enhancement request failed: Illegal header value b'Bearer '
+[2026-05-04T23:30:10.827] [11aa3d7d] Enhancement failed — using original
+[2026-05-04T23:33:29.441] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T19:40:11.121] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T19:40:13.005] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T19:40:14.332] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T19:40:18.872] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T19:40:20.666] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T19:42:22.763] prompt-enhancer-plugin registered (pre_llm_call hook active)
+[2026-05-04T19:47:56.234] prompt-enhancer-plugin registered (pre_llm_call hook active, FIRST position)
+[2026-05-04T19:53:16.121] Enhancement request failed: Client error '404 Not Found' for url 'https://api.kimi.com/coding/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+[2026-05-04T19:55:11.058] Matched custom_provider 'venice' by api_key
+[2026-05-04T19:55:22.336] Matched custom_provider 'venice' by api_key
+[2026-05-04T19:55:22.337] Matched custom_provider 'venice' by api_key
+[2026-05-04T19:57:31.227] Enhancing message (38 chars): 'write a python function to sort a list'...
+[2026-05-04T19:57:31.260] Matched custom_provider 'venice' by api_key
+[2026-05-04T19:58:00.140] [a59ae358] Enhanced in 28.9s — 38 → 3245 chars
+[2026-05-04T19:59:40.800] Matched custom_provider 'venice' by api_key
+[2026-05-04T19:59:40.800] Matched custom_provider 'venice' by api_key
+[2026-05-04T20:00:51.349] prompt-enhancer-plugin v2.0 registered (provider-agnostic, pre_llm_call hook active, FIRST position)
+[2026-05-04T20:06:14.823] prompt-enhancer-plugin v2.0 registered (provider-agnostic, pre_llm_call hook active, FIRST position)
+[2026-05-04T20:07:04.271] Matched custom_provider 'venice' by api_key (fallback, no explicit base_url)
+[2026-05-04T20:07:04.273] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:07:04.273] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:07:04.273] Using custom_provider 'venice' for enhancement (name match)
+[2026-05-04T20:07:04.274] prompt-enhancer-plugin v2.0 registered (provider-agnostic, pre_llm_call hook active, FIRST position)
+[2026-05-04T20:08:59.348] Matched custom_provider 'venice' by api_key (fallback, no explicit base_url)
+[2026-05-04T20:08:59.349] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:08:59.349] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:08:59.349] Using custom_provider 'venice' for enhancement (name match)
+[2026-05-04T20:08:59.350] prompt-enhancer-plugin v2.0 registered (provider-agnostic, pre_llm_call hook active, FIRST position)
+[2026-05-04T20:09:14.654] Matched custom_provider 'venice' by api_key (fallback, no explicit base_url)
+[2026-05-04T20:09:14.655] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:09:14.655] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:09:14.655] Using custom_provider 'venice' for enhancement (name match)
+[2026-05-04T20:09:14.655] prompt-enhancer-plugin v2.0 registered (provider-agnostic, pre_llm_call hook active, FIRST position)
+[2026-05-04T20:09:58.311] prompt-enhancer-plugin v2.0 registered (provider-agnostic, pre_llm_call hook active, FIRST position)
+[2026-05-04T20:09:58.312] Matched custom_provider 'venice' by api_key (fallback, no explicit base_url)
+[2026-05-04T20:09:58.312] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:09:58.312] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:09:58.312] Using custom_provider 'venice' for enhancement (name match)
+[2026-05-04T20:14:27.640] Matched custom_provider 'venice' by api_key (fallback, no explicit base_url)
+[2026-05-04T20:14:27.640] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:14:27.640] Using custom_provider 'kimi-coding' for enhancement (name match)
+[2026-05-04T20:14:27.641] Using custom_provider 'venice' for enhancement (name match)
+[2026-05-04T20:14:27.641] prompt-enhancer-plugin v2.0 registered (provider-agnostic, pre_llm_call hook active, FIRST position)
